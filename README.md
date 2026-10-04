@@ -42,13 +42,6 @@ open monero-height.html
 start monero-height.html
 ```
 
-#### Option 2: Local Static Server (Optional)
-If you prefer running through a static web server:
-```bash
-python3 -m http.server 8080
-# Open http://localhost:8080/monero-height.html
-```
-
 ### How the Algorithm Works
 
 1. **Get Current Network Height**: Requests `https://xmrchain.net/api/networkinfo` to get current top block height $H$.
@@ -108,12 +101,6 @@ open monero-height.html
 start monero-height.html
 ```
 
-#### Способ 2: Через локальный статический сервер (по желанию)
-Если вам привычнее открывать через веб-сервер:
-```bash
-python3 -m http.server 8080
-# Откройте в браузере: http://localhost:8080/monero-height.html
-```
 
 ### Как работает алгоритм
 
