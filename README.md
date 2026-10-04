@@ -14,7 +14,7 @@ A fast, lightweight, standalone client-side tool to find the nearest Monero (XMR
 When restoring a Monero wallet (such as official Monero GUI/CLI, Feather Wallet, Cake Wallet, or Monerujo) from a mnemonic seed phrase or keys, you are prompted for a **Restore Height** (or restore date).
 
 - If you don't provide a restore height, the wallet may start scanning the entire Monero blockchain starting from the genesis block in April 2014, taking hours or even days.
-- By entering the exact block height corresponding to the date your first transaction was received, synchronization begins immediately from that point, completing the initial wallet scan in just a few minutes.
+- By entering the exact block height corresponding to the date your first transaction was received, synchronization begins immediately from that point, saving much time.
 
 ### Features
 
@@ -73,7 +73,7 @@ This project is licensed under the [MIT License](LICENSE.MIT).
 При создании или восстановлении кошелька Monero (официальный Monero GUI/CLI, Feather Wallet, Cake Wallet, Monerujo) из мнемонической seed-фразы или приватных ключей требуется указать **Restore Height** (высоту восстановления) или дату создания кошелька.
 
 - Если не указать высоту восстановления, кошелёк начнёт сканировать абсолютно все блоки Monero с момента запуска сети в апреле 2014 года, что может занять многие часы или даже дни.
-- Указав точную высоту блока на дату первого получения средств, вы начинаете сканирование ровно с нужного места — синхронизация занимает считанные минуты без риска пропустить транзакции.
+- Указав точную высоту блока на дату первого получения средств, вы начинаете сканирование ровно с нужного места — синхронизация занимает намного меньше времени.
 
 ### Возможности
 
