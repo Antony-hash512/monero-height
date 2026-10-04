@@ -27,10 +27,16 @@ When restoring a Monero wallet (such as official Monero GUI/CLI, Feather Wallet,
 - **100% Client-Side & Zero Dependencies**: Single self-contained HTML file. No NodeJS, no npm packages, no build steps, and no backend server required. Runs directly in any modern browser.
 - **Private & Safe**: Never asks for seeds, private keys, or wallet addresses. Only performs public block timestamp lookups over HTTPS.
 
+### Available Versions
+
+- **`monero-height.html`** (Main): Full-featured modern interface with dynamic language toggle (EN/RU), theme switcher (Light/Dark/System), date presets, search progress bar, formatted result card, and one-click copy buttons.
+- **`minimalistic/monero-height-en.html`**: Lightweight, minimalistic English version without extra design elements (simple input, search button, and terminal output).
+- **`minimalistic/monero-height-ru.html`**: Lightweight, minimalistic Russian version without extra design elements.
+
 ### How to Run
 
 #### Option 1: Direct File Open (Recommended)
-Simply double-click `monero-height.html` or open it directly in your web browser:
+Simply double-click `monero-height.html` (or one of the files in `minimalistic/`) or open it directly in your web browser:
 ```bash
 # On Linux
 xdg-open monero-height.html
@@ -86,10 +92,16 @@ This project is licensed under the [MIT License](LICENSE.MIT).
 - **100% клиентское приложение без зависимостей**: Один автономный HTML-файл. Не требует Node.js, сборщиков, пакетов npm или собственного бэкенда. Работает в любом современном браузере.
 - **Безопасность и приватность**: Не запрашивает seed-фразы, ключи или адреса кошельков. Выполняются только запросы публичных заголовков блоков по защищённому протоколу HTTPS.
 
+### Доступные версии
+
+- **`monero-height.html`** (Основная): Полнофункциональный современный интерфейс с переключателем языков (RU/EN), переключателем тем (Светлая/Тёмная/Системная), быстрыми пресетами дат, индикатором прогресса поиска, карточкой результата и кнопками копирования.
+- **`minimalistic/monero-height-ru.html`**: Минималистичная легковесная версия на русском языке без лишних элементов оформления (только выбор даты, кнопка запуска и терминальный вывод).
+- **`minimalistic/monero-height-en.html`**: Аналогичная минималистичная легковесная версия, полностью локализованная на английский язык.
+
 ### Как запустить
 
 #### Способ 1: Прямое открытие файла (рекомендуется)
-Дважды кликните по файлу `monero-height.html` или откройте его в любом браузере:
+Дважды кликните по файлу `monero-height.html` (или одному из файлов в папке `minimalistic/`) или откройте его в любом браузере:
 ```bash
 # В Linux
 xdg-open monero-height.html
