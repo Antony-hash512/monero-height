@@ -21,7 +21,7 @@ When restoring a Monero wallet (such as official Monero GUI/CLI, Feather Wallet,
 - **Multilingual Interface**: Instant switching between English and Russian (clean typographic `EN` / `RU` toggle).
 - **Theme Switcher**: Choose between **Light**, **Dark**, and **System** (matches OS theme automatically). Remembers preference in `localStorage`.
 - **Fast Binary Search**: Finds the exact block among 3.8+ million blocks in only ~22 network requests in a few seconds.
-- **Quick Date Presets**: One-click selection for *Now*, *24 hours ago*, *7 days ago*, *30 days ago*, *1 year ago*, and *Genesis block (April 18, 2014)*.
+- **Quick Date Presets**: One-click selection for *24 hours ago*, *7 days ago*, *30 days ago*, *1 year ago*, *5 years ago*, and *Genesis block (April 18, 2014)*.
 - **Detailed Result Card**: Displays block height, block hash, timestamp in your local timezone and UTC, time delta, copy-to-clipboard buttons, and direct link to the block in the blockchain explorer.
 - **Live Search Console**: Step-by-step terminal log showing search bounds, timestamps, and minute/hour differences in real-time. Search cancellation supported.
 - **100% Client-Side & Zero Dependencies**: Single self-contained HTML file. No NodeJS, no npm packages, no build steps, and no backend server required. Runs directly in any modern browser.
@@ -86,7 +86,7 @@ This project is licensed under the [MIT License](LICENSE.MIT).
 - **Мультиязычный интерфейс**: Мгновенное переключение между русским и английским языком (аккуратный типографический переключатель `RU` / `EN`).
 - **Переключатель темы оформления**: Поддержка **Светлой**, **Тёмной** и **Системной** темы (автоматически подстраивается под настройки операционной системы). Выбор сохраняется в `localStorage`.
 - **Быстрый бинарный поиск**: Находит нужный блок среди более чем 3.8 млн блоков сети всего за ~22 запроса к блокчейну за пару секунд.
-- **Быстрые пресеты даты**: Установка даты в один клик: *Сейчас*, *24 часа назад*, *7 дней назад*, *30 дней назад*, *1 год назад*, а также дата *генезис-блока (18 апреля 2014 г.)*.
+- **Быстрые пресеты даты**: Установка даты в один клик: *24 часа назад*, *7 дней назад*, *30 дней назад*, *1 год назад*, *5 лет назад*, а также дата *генезис-блока (18 апреля 2014 г.)*.
 - **Информативная карточка результата**: Отображает высоту блока, хэш, дату/время в вашем локальном часовом поясе и в UTC, погрешность во времени, кнопки быстрого копирования и прямую ссылку на блок в обозревателе.
 - **Интерактивный журнал поиска**: Консоль в стиле терминала с отображением каждого шага поиска, границ интервала и разницы во времени в минутах и часах. Поддерживается остановка поиска в любой момент.
 - **100% клиентское приложение без зависимостей**: Один автономный HTML-файл. Не требует Node.js, сборщиков, пакетов npm или собственного бэкенда. Работает в любом современном браузере.

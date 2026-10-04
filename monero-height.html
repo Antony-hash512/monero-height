@@ -728,35 +728,20 @@
             line-height: 1.5;
         }
 
-        /* Footer */
-        footer {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            padding-top: 0.75rem;
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .footer-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .footer-versions {
+        /* Versions Bar under Header */
+        .versions-bar {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             gap: 0.6rem;
             flex-wrap: wrap;
             font-size: 0.82rem;
-            color: var(--text-secondary);
+            color: var(--text-muted);
+            margin-top: -0.5rem;
+            padding: 0 0.25rem;
         }
 
-        .footer-versions a {
+        .versions-bar a {
             color: var(--xmr-orange);
             text-decoration: underline;
             text-underline-offset: 3px;
@@ -764,13 +749,26 @@
             transition: color var(--transition-speed);
         }
 
-        .footer-versions a:hover {
+        .versions-bar a:hover {
             color: var(--xmr-orange-hover);
         }
 
-        .footer-versions .sep {
+        .versions-bar .sep {
             color: var(--text-muted);
             opacity: 0.6;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-subtle);
         }
 
         footer a {
@@ -868,6 +866,14 @@
             </div>
         </header>
 
+        <!-- Minimalistic versions link bar (under header) -->
+        <div class="versions-bar">
+            <span data-i18n="footerMinimalisticTitle">Минималистичные версии:</span>
+            <a href="minimalistic/monero-height-ru.html" data-i18n="versionRu">Русская версия</a>
+            <span class="sep">•</span>
+            <a href="minimalistic/monero-height-en.html" data-i18n="versionEn">English version</a>
+        </div>
+
         <!-- Main Card: Input & Controls -->
         <main class="card">
             <div class="hero-header">
@@ -906,11 +912,11 @@
                 <!-- Presets -->
                 <div class="presets-bar">
                     <span class="presets-title" data-i18n="presetsTitle">Быстрый выбор:</span>
-                    <button type="button" class="preset-chip" onclick="applyPreset('now')" data-i18n="presetNow">Сейчас</button>
                     <button type="button" class="preset-chip" onclick="applyPreset('1d')" data-i18n="presetYesterday">24 часа назад</button>
                     <button type="button" class="preset-chip" onclick="applyPreset('7d')" data-i18n="presetWeek">7 дней назад</button>
                     <button type="button" class="preset-chip" onclick="applyPreset('30d')" data-i18n="presetMonth">30 дней назад</button>
                     <button type="button" class="preset-chip" onclick="applyPreset('1y')" data-i18n="presetYear">1 год назад</button>
+                    <button type="button" class="preset-chip" onclick="applyPreset('5y')" data-i18n="preset5Years">5 лет назад</button>
                     <button type="button" class="preset-chip" onclick="applyPreset('genesis')" data-i18n="presetGenesis">Генезис (2014)</button>
                 </div>
 
@@ -1027,16 +1033,8 @@
 
         <!-- Footer -->
         <footer>
-            <div class="footer-row">
-                <div data-i18n="footerPrivacy">100% клиентское приложение. Работает без сервера, запросы отправляются напрямую к открытому API xmrchain.net.</div>
-                <div><span data-i18n="footerLicense">Лицензия MIT</span> • Monero Height Finder</div>
-            </div>
-            <div class="footer-versions">
-                <span data-i18n="footerMinimalisticTitle">Минималистичные версии:</span>
-                <a href="minimalistic/monero-height-ru.html" data-i18n="versionRu">Русская версия</a>
-                <span class="sep">•</span>
-                <a href="minimalistic/monero-height-en.html" data-i18n="versionEn">English version</a>
-            </div>
+            <div data-i18n="footerPrivacy">100% клиентское приложение. Работает без сервера, запросы отправляются напрямую к открытому API xmrchain.net.</div>
+            <div><span data-i18n="footerLicense">Лицензия MIT</span> • Monero Height Finder</div>
         </footer>
     </div>
 
@@ -1056,11 +1054,11 @@
                 inputLabel: "Выберите дату и время",
                 inputSublabel: "В вашем локальном часовом поясе",
                 presetsTitle: "Быстрый выбор:",
-                presetNow: "Сейчас",
                 presetYesterday: "24 часа назад",
                 presetWeek: "7 дней назад",
                 presetMonth: "30 дней назад",
                 presetYear: "1 год назад",
+                preset5Years: "5 лет назад",
                 presetGenesis: "Генезис (2014)",
                 btnSearch: "Найти блок",
                 btnSearching: "Идёт поиск...",
@@ -1121,11 +1119,11 @@
                 inputLabel: "Select Date and Time",
                 inputSublabel: "In your local timezone",
                 presetsTitle: "Quick presets:",
-                presetNow: "Now",
                 presetYesterday: "24 hours ago",
                 presetWeek: "7 days ago",
                 presetMonth: "30 days ago",
                 presetYear: "1 year ago",
+                preset5Years: "5 years ago",
                 presetGenesis: "Genesis (2014)",
                 btnSearch: "Find Block",
                 btnSearching: "Searching...",
@@ -1327,9 +1325,6 @@
             let targetDate = new Date();
 
             switch (preset) {
-                case 'now':
-                    targetDate = now;
-                    break;
                 case '1d':
                     targetDate = new Date(now.getTime() - 24 * 3600 * 1000);
                     break;
@@ -1341,6 +1336,9 @@
                     break;
                 case '1y':
                     targetDate = new Date(now.getTime() - 365 * 24 * 3600 * 1000);
+                    break;
+                case '5y':
+                    targetDate = new Date(now.getFullYear() - 5, now.getMonth(), now.getDate(), now.getHours(), now.getMinutes());
                     break;
                 case 'genesis':
                     // Monero Block 1: 2014-04-18 10:49:53 UTC
@@ -1587,7 +1585,7 @@
             initLang();
 
             // Set default date to current time
-            applyPreset('now');
+            document.getElementById('dateInput').value = toDateTimeLocal(new Date());
 
             // Theme switcher buttons
             document.querySelectorAll('#themeSwitcher .segment-btn').forEach(btn => {
