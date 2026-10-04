@@ -18,7 +18,7 @@ When restoring a Monero wallet (such as official Monero GUI/CLI, Feather Wallet,
 
 ### Features
 
-- **Multilingual Interface**: Instant switching between English and Russian without emoji flags (clean typographic `EN` / `RU` toggle).
+- **Multilingual Interface**: Instant switching between English and Russian (clean typographic `EN` / `RU` toggle).
 - **Theme Switcher**: Choose between **Light**, **Dark**, and **System** (matches OS theme automatically). Remembers preference in `localStorage`.
 - **Fast Binary Search**: Finds the exact block among 3.8+ million blocks in only ~22 network requests in a few seconds.
 - **Quick Date Presets**: One-click selection for *Now*, *24 hours ago*, *7 days ago*, *30 days ago*, *1 year ago*, and *Genesis block (April 18, 2014)*.
@@ -84,7 +84,7 @@ This project is licensed under the [MIT License](LICENSE.MIT).
 
 ### Возможности
 
-- **Мультиязычный интерфейс**: Мгновенное переключение между русским и английским языком без эмоджи флагов (аккуратный типографический переключатель `RU` / `EN`).
+- **Мультиязычный интерфейс**: Мгновенное переключение между русским и английским языком (аккуратный типографический переключатель `RU` / `EN`).
 - **Переключатель темы оформления**: Поддержка **Светлой**, **Тёмной** и **Системной** темы (автоматически подстраивается под настройки операционной системы). Выбор сохраняется в `localStorage`.
 - **Быстрый бинарный поиск**: Находит нужный блок среди более чем 3.8 млн блоков сети всего за ~22 запроса к блокчейну за пару секунд.
 - **Быстрые пресеты даты**: Установка даты в один клик: *Сейчас*, *24 часа назад*, *7 дней назад*, *30 дней назад*, *1 год назад*, а также дата *генезис-блока (18 апреля 2014 г.)*.
