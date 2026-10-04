@@ -731,14 +731,46 @@
         /* Footer */
         footer {
             display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .footer-row {
+            display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 0.75rem;
+        }
+
+        .footer-versions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
             font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-versions a {
+            color: var(--xmr-orange);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 500;
+            transition: color var(--transition-speed);
+        }
+
+        .footer-versions a:hover {
+            color: var(--xmr-orange-hover);
+        }
+
+        .footer-versions .sep {
             color: var(--text-muted);
-            padding-top: 0.5rem;
-            border-top: 1px solid var(--border-subtle);
+            opacity: 0.6;
         }
 
         footer a {
@@ -840,7 +872,7 @@
         <main class="card">
             <div class="hero-header">
                 <div class="hero-badge">
-                    <span>⚡ Monero O(log N)</span>
+                    <span data-i18n="heroBadge">⚡ Быстрый бинарный поиск в блокчейне</span>
                 </div>
                 <h2 class="hero-title" data-i18n="title">Бинарный поиск блока Monero по дате</h2>
                 <p class="hero-desc" data-i18n="subtitle">Быстрое определение высоты блока (restore height) для любой даты за ~22 запроса к блокчейну через xmrchain.net.</p>
@@ -995,8 +1027,16 @@
 
         <!-- Footer -->
         <footer>
-            <div data-i18n="footerPrivacy">100% клиентское приложение. Работает без сервера, запросы отправляются напрямую к открытому API xmrchain.net.</div>
-            <div><span data-i18n="footerLicense">Лицензия MIT</span> • Monero Height Finder</div>
+            <div class="footer-row">
+                <div data-i18n="footerPrivacy">100% клиентское приложение. Работает без сервера, запросы отправляются напрямую к открытому API xmrchain.net.</div>
+                <div><span data-i18n="footerLicense">Лицензия MIT</span> • Monero Height Finder</div>
+            </div>
+            <div class="footer-versions">
+                <span data-i18n="footerMinimalisticTitle">Минималистичные версии:</span>
+                <a href="minimalistic/monero-height-ru.html" data-i18n="versionRu">Русская версия</a>
+                <span class="sep">•</span>
+                <a href="minimalistic/monero-height-en.html" data-i18n="versionEn">English version</a>
+            </div>
         </footer>
     </div>
 
@@ -1007,6 +1047,7 @@
             ru: {
                 pageTitle: "Поиск блока Monero по дате — XMR Block Finder",
                 brandSubtitle: "Поиск высоты блока XMR",
+                heroBadge: "⚡ Быстрый бинарный поиск в блокчейне",
                 title: "Бинарный поиск блока Monero по дате",
                 subtitle: "Быстрое определение высоты блока (restore height) для любой даты за ~22 запроса к блокчейну через xmrchain.net.",
                 themeLight: "Светлая",
@@ -1063,11 +1104,15 @@
                 whyTitle: "Зачем это нужно?",
                 whyDesc: "При восстановлении кошелька Monero (CLI, GUI, Cake Wallet, Feather) указание точной высоты блока позволяет начать сканирование с нужного момента, сокращая время синхронизации с часов до минут.",
                 footerPrivacy: "100% клиентское приложение. Работает без сервера, запросы отправляются напрямую к открытому API xmrchain.net.",
-                footerLicense: "Лицензия MIT"
+                footerLicense: "Лицензия MIT",
+                footerMinimalisticTitle: "Минималистичные версии:",
+                versionRu: "Русская версия",
+                versionEn: "English version"
             },
             en: {
                 pageTitle: "Monero Block Finder by Date — XMR Block Finder",
                 brandSubtitle: "XMR Block Height Finder",
+                heroBadge: "⚡ Fast blockchain binary search",
                 title: "Binary Search Monero Block by Date",
                 subtitle: "Fast determination of Monero restore height for any date in ~22 blockchain queries via xmrchain.net.",
                 themeLight: "Light",
@@ -1124,7 +1169,10 @@
                 whyTitle: "Why is this needed?",
                 whyDesc: "When restoring a Monero wallet (CLI, GUI, Cake Wallet, Feather), specifying the exact block height starts scanning from the right point, cutting synchronization time from hours to minutes.",
                 footerPrivacy: "100% client-side application. Runs without a backend, requests go directly to the public xmrchain.net API.",
-                footerLicense: "MIT License"
+                footerLicense: "MIT License",
+                footerMinimalisticTitle: "Minimalistic versions:",
+                versionRu: "Russian version",
+                versionEn: "English version"
             }
         };
 
