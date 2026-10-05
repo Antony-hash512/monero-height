@@ -1034,7 +1034,10 @@
         <!-- Footer -->
         <footer>
             <div data-i18n="footerPrivacy">100% клиентское приложение. Работает без сервера, запросы отправляются напрямую к открытому API xmrchain.net.</div>
-            <div><span data-i18n="footerLicense">Лицензия MIT</span> • Monero Height Finder</div>
+            <div>
+                <a href="https://github.com/Antony-hash512/monero-height#russian" id="githubLink" target="_blank" rel="noopener noreferrer">GitHub</a> • 
+                <span data-i18n="footerLicense">Лицензия MIT</span> • Monero Height Finder
+            </div>
         </footer>
     </div>
 
@@ -1269,6 +1272,14 @@
                 btn.classList.toggle('active', isActive);
                 btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
             });
+
+            // Update GitHub link anchor based on language
+            const githubLink = document.getElementById('githubLink');
+            if (githubLink) {
+                githubLink.href = lang === 'en'
+                    ? 'https://github.com/Antony-hash512/monero-height#english'
+                    : 'https://github.com/Antony-hash512/monero-height#russian';
+            }
 
             // If log has not been populated with search data, update its initial prompt
             if (isLogInitial) {
